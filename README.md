@@ -9,6 +9,7 @@ command to deploy the application : kubectl apply -f deployment.yaml
 The repo also contains the configuration file for service(service.yaml) that can be create a service to access the application. <br />
 command to create the service : kubectl apply -f service.yaml
 
-Click on the below button to import the collection of endpoints to postman.
+Click on the below button to import the collection of endpoints to postman.<br/>
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ee70573e05bd7e0c3b02) <br />
-[Note: the ip address of all the requests must be changed according to the server the application is deployed to.]
+<br/>
+[Note: the ip address of all the requests must be changed according to the server the application is deployed to and also the file people_info.csv has to download to local directory to use it in the upload request.]

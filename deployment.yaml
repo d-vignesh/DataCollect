@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: datacollect
+  labels:
+    app: datacollect
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: datacollect
+  template:
+    metadata:
+      labels:
+        app: datacollect
+    spec:
+      containers:
+      - name: datacollectapp
+        image: vickee/datacollect:v2
+        ports:
+        - containerPort: 8000

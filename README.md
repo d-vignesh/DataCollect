@@ -1,8 +1,8 @@
 This repo contains the rest api's that allows the user to stop, terminate and resume the file upload and file download process initiated.
 
-The application is containerized into docker image the details of which are as follow:
+The application is containerized into docker image the details of which are as follow:<br/>
 Docker image : vickee/datacollect:v2 <br />
-Docker hub url of docker image: https://hub.docker.com/repository/docker/vickee/datacollect
+Docker hub url of docker image: https://hub.docker.com/repository/docker/vickee/datacollect <br/>
 
 The repo also contains the configuration file for deployment(k8s_files/deployment.yaml) that can used to deploy the application to kubernetes <br />
 

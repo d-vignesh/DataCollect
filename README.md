@@ -1,5 +1,6 @@
 This repo contains the rest api's that allows the user to stop, terminate and resume the file upload and file download process initiated.
 
+The application is containerized into docker image the details of which are as follow:
 Docker image : vickee/datacollect:v2 <br />
 Docker hub url of docker image: https://hub.docker.com/repository/docker/vickee/datacollect
 

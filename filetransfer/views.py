@@ -144,11 +144,22 @@ class ChangeExecutionStatus(APIView):
 		objectName = request.data['objectName']
 		operation = request.data['operation']
 		status = request.data['action']
-
-		op_status = OperationStatus.objects.filter(user=user, objectName=objectName, operation=operation).get()
-		op_status.status = status
-		op_status.save()
+		status_code_map = {
+			1: 'progress',
+			2: 'stop',
+			3: 'resume',
+			4: 'terminate'
+		}
+		
+		op_status = OperationStatus.objects.filter(user=user, objectName=objectName, operation=operation)
+		if op_status:
+			op_status = op_status.get()
+			op_status.status = status
+			op_status.save()
+			msg = "operation status changed to " + status_code_map[status] + " for object " + objectName
+		else:
+			msg = "no " + operation + " operation was initiated for " + objectName
 
 		return Response({
-				"message": "operation status changed."
+				"message": msg
 			})
